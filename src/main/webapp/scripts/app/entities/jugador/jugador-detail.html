@@ -1,0 +1,86 @@
+
+<div>
+    <h2><span translate="ligabaloncestoApp.jugador.detail.title">Jugador</span> {{jugador.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="ligabaloncestoApp.jugador.nombre">Nombre</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugador.nombre}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabaloncestoApp.jugador.fechaNacimiento">FechaNacimiento</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugador.fechaNacimiento}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabaloncestoApp.jugador.canastasTotales">CanastasTotales</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugador.canastasTotales}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabaloncestoApp.jugador.asistenciasTotales">AsistenciasTotales</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugador.asistenciasTotales}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabaloncestoApp.jugador.rebotesTotales">RebotesTotales</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugador.rebotesTotales}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabaloncestoApp.jugador.posicion">Posicion</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugador.posicion}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabaloncestoApp.jugador.equipo">equipo</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="equipo.detail({id:jugador.equipo.id})">{{jugador.equipo.nombre}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabaloncestoApp.jugador.capitan">capitan</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="equipo.detail({id:jugador.capitan.id})">{{jugador.capitan.nombre}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

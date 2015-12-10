@@ -1,0 +1,25 @@
+{
+    "ligabaloncestoApp": {
+        "equipo" : {
+            "home": {
+                "title": "Equipos",
+                "createLabel": "Create a new Equipo",
+                "createOrEditLabel": "Create or edit a Equipo"
+            },
+            "created": "A new Equipo is created with identifier {{ param }}",
+            "updated": "A Equipo is updated with identifier {{ param }}",
+            "deleted": "A Equipo is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Equipo {{ id }}?"
+            },
+            "detail": {
+                "title": "Equipo"
+            },
+            "nombre": "Nombre",
+            "fechaCreacion": "FechaCreacion",
+            "localidad": "Localidad",
+            "jugador": "Jugador",
+            "jugador": "Jugador"
+        }
+    }
+}

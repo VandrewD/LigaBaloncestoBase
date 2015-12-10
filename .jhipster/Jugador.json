@@ -1,0 +1,68 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "equipo",
+            "otherEntityName": "equipo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "capitan",
+            "otherEntityName": "equipo",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "nombre",
+            "ownerSide": true,
+            "otherEntityField": "nombre"
+        }
+
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "fechaNacimiento",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "canastasTotales",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "asistenciasTotales",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "rebotesTotales",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "posicion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151210184330",
+    "dto": "no",
+    "pagination": "pagination"
+}

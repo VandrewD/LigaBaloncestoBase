@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql"/>
+    <property name="autoIncrement" value="false" dbms="oracle"/>
+
+    <property name="floatType" value="real" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle"/>
+
+    <!--
+        Added the entity Jugador.
+    -->
+    <changeSet id="20151210184330" author="jhipster">
+        <createTable tableName="JUGADOR">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}" >
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nombre" type="varchar(255)"/>
+            <column name="fecha_nacimiento" type="date"/>
+            <column name="canastas_totales" type="integer"/>
+            <column name="asistencias_totales" type="integer"/>
+            <column name="rebotes_totales" type="integer"/>
+            <column name="posicion" type="varchar(255)"/>
+            <column name="equipo_id" type="bigint"/>
+            <column name="capitan_id" type="bigint">
+                <constraints unique="true"/>
+            </column>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="equipo_id"
+                                 baseTableName="JUGADOR"
+                                 constraintName="fk_jugador_equipo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="EQUIPO"/>
+
+        <addForeignKeyConstraint baseColumnNames="capitan_id"
+                                 baseTableName="JUGADOR"
+                                 constraintName="fk_jugador_capitan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="EQUIPO"/>
+
+    </changeSet>
+</databaseChangeLog>

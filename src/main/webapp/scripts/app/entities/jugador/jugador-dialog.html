@@ -1,0 +1,114 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myJugadorLabel" translate="ligabaloncestoApp.jugador.home.createOrEditLabel">Create or edit a Jugador</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="jugador.id" readonly>
+        </div>
+
+        <div class="form-group">
+            <label translate="ligabaloncestoApp.jugador.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="jugador.nombre"
+                    >
+
+        </div>
+        <div class="form-group">
+            <label translate="ligabaloncestoApp.jugador.fechaNacimiento" for="field_fechaNacimiento">FechaNacimiento</label>
+            <input type="date" class="form-control" name="fechaNacimiento" id="field_fechaNacimiento"
+                    ng-model="jugador.fechaNacimiento"
+                    >
+
+        </div>
+        <div class="form-group">
+            <label translate="ligabaloncestoApp.jugador.canastasTotales" for="field_canastasTotales">CanastasTotales</label>
+            <input type="number" class="form-control" name="canastasTotales" id="field_canastasTotales"
+                    ng-model="jugador.canastasTotales"
+                    min="0">
+
+            <div ng-show="editForm.canastasTotales.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.canastasTotales.$error.min" translate="entity.validation.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.canastasTotales.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="ligabaloncestoApp.jugador.asistenciasTotales" for="field_asistenciasTotales">AsistenciasTotales</label>
+            <input type="number" class="form-control" name="asistenciasTotales" id="field_asistenciasTotales"
+                    ng-model="jugador.asistenciasTotales"
+                    min="0">
+
+            <div ng-show="editForm.asistenciasTotales.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.asistenciasTotales.$error.min" translate="entity.validation.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.asistenciasTotales.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="ligabaloncestoApp.jugador.rebotesTotales" for="field_rebotesTotales">RebotesTotales</label>
+            <input type="number" class="form-control" name="rebotesTotales" id="field_rebotesTotales"
+                    ng-model="jugador.rebotesTotales"
+                    min="0">
+
+            <div ng-show="editForm.rebotesTotales.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.rebotesTotales.$error.min" translate="entity.validation.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.rebotesTotales.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="ligabaloncestoApp.jugador.posicion" for="field_posicion">Posicion</label>
+            <input type="text" class="form-control" name="posicion" id="field_posicion"
+                    ng-model="jugador.posicion"
+                    >
+
+        </div>
+        <div class="form-group">
+            <label translate="ligabaloncestoApp.jugador.equipo" for="field_equipo">equipo</label>
+            
+            <select class="form-control" id="field_equipo" name="equipo" ng-model="jugador.equipo" ng-options="equipo as equipo.nombre for equipo in equipos track by equipo.id">
+                <option value=""></option>
+            </select>
+            
+        </div>
+        <div class="form-group">
+            <label translate="ligabaloncestoApp.jugador.capitan" for="field_capitan">capitan</label>
+            
+            <select class="form-control" id="field_capitan" name="capitan" ng-model="jugador.capitan" ng-options="equipo as equipo.nombre for equipo in capitans | orderBy:'id' track by equipo.id">
+                <option value=""></option>
+            </select>
+            
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,23 @@
+{
+    "ligabaloncestoApp": {
+        "equipo" : {
+            "home": {
+                "title": "Equipos",
+                "createLabel": "Créer un nouveau Equipo",
+                "createOrEditLabel": "Créer ou éditer un Equipo"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Equipo {{ id }} ?"
+            },
+            "detail": {
+                "title": "Equipo"
+            },
+            "nombre": "Nombre",
+            "fechaCreacion": "FechaCreacion",
+            "localidad": "Localidad",
+            "jugador": "Jugador",
+            "jugador": "Jugador"
+        }
+    }
+}
+

@@ -3,9 +3,11 @@
     xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
-
+<!-- sempre posar la entitat propietaria a sota-->
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151215194945_added_entity_Entrenador.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20151210184022_added_entity_Equipo.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20151210184330_added_entity_Jugador.xml" relativeToChangelogFile="false"/>
+
     <!-- JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

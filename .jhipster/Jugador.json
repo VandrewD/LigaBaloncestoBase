@@ -14,7 +14,7 @@
             "relationshipType": "one-to-one",
             "otherEntityField": "nombre",
             "ownerSide": true,
-            "otherEntityField": "nombre"
+            "otherEntityRelationshipName": "jugador"
         }
 
     ],

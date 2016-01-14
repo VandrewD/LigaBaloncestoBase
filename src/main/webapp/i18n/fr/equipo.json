@@ -16,7 +16,8 @@
             "fechaCreacion": "FechaCreacion",
             "localidad": "Localidad",
             "jugador": "Jugador",
-            "jugador": "Jugador"
+            "jugador": "Jugador",
+            "entrenador": "Entrenador"
         }
     }
 }

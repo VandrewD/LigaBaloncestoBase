@@ -8,6 +8,7 @@
                 "main": "Entités",
                 "equipo": "Equipo",
                 "jugador": "Jugador",
+                "entrenador": "Entrenador",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

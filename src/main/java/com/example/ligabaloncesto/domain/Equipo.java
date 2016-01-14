@@ -51,6 +51,9 @@ public class Equipo implements Serializable {
     @JsonIgnore
     private Jugador jugador;
 
+    @OneToOne
+    private Entrenador entrenador;
+
     public Long getId() {
         return id;
     }
@@ -97,6 +100,14 @@ public class Equipo implements Serializable {
 
     public void setJugador(Jugador jugador) {
         this.jugador = jugador;
+    }
+
+    public Entrenador getEntrenador() {
+        return entrenador;
+    }
+
+    public void setEntrenador(Entrenador entrenador) {
+        this.entrenador = entrenador;
     }
 
     @Override

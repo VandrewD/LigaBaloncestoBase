@@ -45,6 +45,7 @@
                     <th translate="ligabaloncestoApp.equipo.nombre">Nombre</th>
                     <th translate="ligabaloncestoApp.equipo.fechaCreacion">FechaCreacion</th>
                     <th translate="ligabaloncestoApp.equipo.localidad">Localidad</th>
+                    <th translate="ligabaloncestoApp.equipo.entrenador">entrenador</th>
                     <th></th>
                 </tr>
             </thead>
@@ -54,6 +55,9 @@
                     <td>{{equipo.nombre}}</td>
                     <td>{{equipo.fechaCreacion}}</td>
                     <td>{{equipo.localidad}}</td>
+                    <td>
+                        <a ui-sref="entrenador.detail({id:equipo.entrenador.id})">{{equipo.entrenador.nombre}}</a>
+                    </td>
                     <td>
                         <button type="submit"
                                 ui-sref="equipo.detail({id:equipo.id})"

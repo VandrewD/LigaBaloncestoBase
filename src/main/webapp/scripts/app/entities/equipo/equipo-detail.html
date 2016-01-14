@@ -34,6 +34,14 @@
                     <span class="form-control-static">{{equipo.localidad}}</span>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <span translate="ligabaloncestoApp.equipo.entrenador">entrenador</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="entrenador.detail({id:equipo.entrenador.id})">{{equipo.entrenador.nombre}}</a>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>

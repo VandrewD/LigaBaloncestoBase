@@ -25,7 +25,16 @@
             <column name="nombre" type="varchar(255)"/>
             <column name="fecha_creacion" type="date"/>
             <column name="localidad" type="varchar(255)"/>
+            <column name="entrenador_id" type="bigint">
+                <constraints unique="true"/>
+            </column>
         </createTable>
         
+        <addForeignKeyConstraint baseColumnNames="entrenador_id"
+                                 baseTableName="EQUIPO"
+                                 constraintName="fk_equipo_entrenador_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ENTRENADOR"/>
+
     </changeSet>
 </databaseChangeLog>

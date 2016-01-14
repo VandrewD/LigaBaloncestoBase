@@ -35,6 +35,14 @@
                     >
 
         </div>
+        <div class="form-group">
+            <label translate="ligabaloncestoApp.equipo.entrenador" for="field_entrenador">entrenador</label>
+            
+            <select class="form-control" id="field_entrenador" name="entrenador" ng-model="equipo.entrenador" ng-options="entrenador as entrenador.nombre for entrenador in entrenadors | orderBy:'id' track by entrenador.id">
+                <option value=""></option>
+            </select>
+            
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">

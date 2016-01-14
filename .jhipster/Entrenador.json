@@ -1,0 +1,27 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "equipo",
+            "otherEntityName": "equipo",
+            "relationshipType": "one-to-one",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "entrenador"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "fechaNacimiento",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20151215194945",
+    "dto": "no",
+    "pagination": "pagination"
+}

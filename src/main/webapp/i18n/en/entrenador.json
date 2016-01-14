@@ -1,0 +1,23 @@
+{
+    "ligabaloncestoApp": {
+        "entrenador" : {
+            "home": {
+                "title": "Entrenadors",
+                "createLabel": "Create a new Entrenador",
+                "createOrEditLabel": "Create or edit a Entrenador"
+            },
+            "created": "A new Entrenador is created with identifier {{ param }}",
+            "updated": "A Entrenador is updated with identifier {{ param }}",
+            "deleted": "A Entrenador is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Entrenador {{ id }}?"
+            },
+            "detail": {
+                "title": "Entrenador"
+            },
+            "nombre": "Nombre",
+            "fechaNacimiento": "FechaNacimiento",
+            "equipo": "Equipo"
+        }
+    }
+}
